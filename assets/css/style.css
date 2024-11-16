@@ -2,9 +2,6 @@
   #style.css
 \*-----------------------------------*/
 
-/**
- * copyright 2022 @codewithsadee
- */
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
@@ -146,7 +143,7 @@ button {
 }
 
 #tag {
-  font-size: 11px;
+  font-size: var(--fs-6);
   border-radius: 7px;
   padding: 0px 8px;
   margin: 3px;
@@ -265,7 +262,7 @@ article.active {
 }
 
 .h4 {
-  font-size: var(--fs-4);
+  font-size: var(--fs-5);
 }
 
 .h5 {
@@ -368,7 +365,7 @@ main {
 
 .info-content .name {
   color: var(--white-2);
-  font-size: var(--fs-3);
+  font-size: var(--fs-1);
   font-weight: var(--fw-500);
   letter-spacing: -0.25px;
   margin-bottom: 10px;
@@ -512,7 +509,7 @@ main {
 
 .navbar-link {
   color: var(--light-gray);
-  font-size: var(--fs-8);
+  font-size: var(--fs-4);
   padding: 20px 7px;
   transition: color var(--transition-1);
 }
@@ -771,10 +768,9 @@ main {
 }
 
 .modal-content {
-  background-color: white; /* Background color for modal content */
   margin: 5% auto; /* Center the modal content */
   padding: 40px; /* Padding inside the modal */
-  border: 1px solid #888; /* Border for the modal */
+
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
   width: 80%; /* Width of the modal content */
@@ -1816,7 +1812,7 @@ textarea.form-input::-webkit-resizer {
 
   .sidebar,
   article {
-    width: 700px;
+    width: 890px;
   }
 
   .has-scrollbar::-webkit-scrollbar-button {
@@ -2165,4 +2161,60 @@ textarea.form-input::-webkit-resizer {
   border-radius: 16px;
   transform: translateZ(0px);
   border: 0px solid #eee;
+}
+
+/*image slideshow fade out*/
+.w3-animate-fading {
+  animation: fading 5s infinite;
+}
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.w3-display-container {
+  position: relative;
+}
+.w3-tooltip .w3-text {
+  display: none;
+}
+.w3-tooltip:hover .w3-text {
+  display: inline-block;
+}
+.w3-display-bottomleft {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.w3-display-bottomright {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.w3-container,
+.w3-panel {
+  padding: 0.01em 16px;
+}
+.w3-panel {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.w3-padding-16 {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+.w3-padding-24 {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+.w3-black,
+.w3-hover-black:hover {
+  color: #fff !important;
+  background-color: #000 !important;
 }
